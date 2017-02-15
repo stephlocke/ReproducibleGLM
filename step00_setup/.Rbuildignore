@@ -1,0 +1,15 @@
+^data-raw$
+^data-processed$
+^analysis$
+^outputs$
+^docs$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.travis\.yml$
+^.*\.sqlite$
+inst/slidedecks/shiny/rs-connect/
+out
+^README\.Rmd$
+^README-.*\.png$
+^packrat/
+^\.Rprofile$

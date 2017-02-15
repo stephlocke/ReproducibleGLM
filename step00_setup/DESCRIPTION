@@ -1,0 +1,15 @@
+Package: step00setup
+Title: A Project Environment
+Version: 0.1.0
+Authors@R: person("Steph", "Locke",   email="steph@itsalocke.com", role = c("aut", "cre"))
+Description: This shows the basic setup steps for making a reproducible analysis project.
+Depends:
+    R (>= 3.1.2)
+Suggests:
+    knitr,
+    rmarkdown,
+    packrat
+License: MIT + file LICENSE
+LazyData: true
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1
