@@ -1,0 +1,108 @@
+---
+title: "Reproducible logistic regression models"
+author: "Steph Locke (@SteffLocke)"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_document: 
+    code_folding: show
+    number_sections: yes
+    toc: yes
+    toc_float: true
+    toc_depth: 2
+---
+
+
+# Agenda
+- Analysis workflow
+- Sources of change
+- Accounting for change
+- GLM step-by-step - Project setup
+- GLM step-by-step - Data
+
+# Sources of change in analysis
+
+## Exercise
+What sort of things can alter the results of a piece of analysis?
+
+## Answers
+- Changes in data
+- Changes in code behaviours
+- Changes in behaviours in dependencies
+- Randomness
+
+# Accounting for change
+
+## Exercise
+What sort of things can we do to prevent changes creeping into our analysis that stop it from being "deterministic"?
+
+## Answers
+- Checksums to flag if anything has changed
+- Keeping a seperate copy of data
+- Keeping dependencies the same over time
+- Source control
+- Unit testing and validating code
+- `set.seed`
+
+# GLM step-by-step -- Project setup
+
+## Project checklist
+- Git
+- Project options
+  + No Rdata or history!
+  + Insert spaces for tabs
+- Packrat
+  +`packrat::init()`
+- Folder structure
+  - data
+  - processeddata
+  - analysis
+  - outputs
+  - docs
+- DESCRIPTION
+- LICENSE
+- .Rbuildignore
+- README.Rmd
+- Makefile
+  + [Karl Broman on Makefiles](http://kbroman.org/minimal_make/)
+- .travis.yml
+
+## Travis setup 
+## Github setup
+
+# GLM step-by-step -- Data 
+- Source
+- Verification steps
+- Multiple outputs?
+  + Main report
+  + Supplementary data quality report
+  + Shiny?
+
+# GLM step-by-step -- Data processing
+- Cleaning steps
+- Sampling
+- Feature scaling
+- Univariate analysis
+- Bivariate analysis
+
+# GLM step-by-step -- Candidate models
+- Feature selection
+- Various glm* models
+
+# GLM step-by-step -- Evaluation
+- Scaling sample
+- Single model evaluation techniques
+- Comparing multiple models
+- Cross-validation
+
+# GLM step-by-step -- Model selection
+- Using evaluation metrics to select best model
+- Presenting model
+- In-depth evaluation of best model
+
+# GLM step-by-step -- Supplementary materials
+- Data lineage 
+- Data quality
+- Feature analysis in-depth
+- Candidate model evaluations
+- Code
+- Reproducibility info
